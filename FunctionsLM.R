@@ -6,6 +6,15 @@
 generateY <- function(X, beta, sigma, seed = 5832652){
   #[ToDo] Set seed and generate Y following linear model
   
+  #set seed for randomization
+  set.seed(seed) 
+  
+  #define n for number of error
+  n = length(beta)
+  
+  #calculate Y with generating from normal dist
+  Y = X %*% beta + rnorm(n,0,sigma)
+  
   # Return Y
   return(Y)
 }
