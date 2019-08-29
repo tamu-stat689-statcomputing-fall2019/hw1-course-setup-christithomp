@@ -25,6 +25,13 @@ generateY <- function(X, beta, sigma, seed = 5832652){
 calculateBeta <- function(X, Y){
   # Calculate beta_LS
   
+  #beta_LS = (X'X)^(-1)X'Y
+  beta_LS = t(X) %*% X 
+  #beta_LS = crossprod(X,X))
+  beta_LS = solve(beta_LS) %*% t(X)
+  #beta_LS = solve(beta_LS, t(X))
+  beta_LS = beta_LS %*% Y 
+  
   # Return beta
   return(beta_LS)
 }
