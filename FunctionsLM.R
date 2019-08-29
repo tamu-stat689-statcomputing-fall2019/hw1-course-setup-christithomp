@@ -27,9 +27,7 @@ calculateBeta <- function(X, Y){
   
   #beta_LS = (X'X)^(-1)X'Y
   beta_LS = t(X) %*% X 
-  #beta_LS = crossprod(X,X))
   beta_LS = solve(beta_LS) %*% t(X)
-  #beta_LS = solve(beta_LS, t(X))
   beta_LS = beta_LS %*% Y 
   
   # Return beta
@@ -38,6 +36,8 @@ calculateBeta <- function(X, Y){
 
 # Calculate MSE
 calculateMSE <- function(beta, beta_LS){
+  #use formula below to calculate MSE
+  MSE = sum((beta - beta_LS)^2)
   
   # Return MSE - error ||beta - beta_LS||_2^2
   return(MSE)
