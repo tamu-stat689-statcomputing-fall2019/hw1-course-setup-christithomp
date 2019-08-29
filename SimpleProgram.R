@@ -9,6 +9,7 @@ beta = rep(2,p) # true vector of coefficients
 X = matrix(rnorm(n*p), n, p) # n by p matrix of predictors
 
 # [ToDo] Use generateY function to generate Y
+Y = generateY(X, beta, sigma) #define Y from generateY function
 
 # [ToDo] Use calculateBeta function to calculate beta_LS
 
