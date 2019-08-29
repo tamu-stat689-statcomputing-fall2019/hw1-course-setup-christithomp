@@ -15,3 +15,4 @@ Y = generateY(X, beta, sigma) #define Y from generateY function
 beta_LS = calculateBeta(X, Y) #define beta from calculateBeta function
 
 # [ToDo] Use calculateMSE to assess the estimation error measured by squared eucledian distance - ||beta - beta_LS||_2^2
+MSE = calculateMSE(beta, beta_LS) #define MSE from calculateMSE function
