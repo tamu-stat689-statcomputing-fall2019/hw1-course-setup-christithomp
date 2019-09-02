@@ -13,7 +13,7 @@ generateY <- function(X, beta, sigma, seed = 5832652){
   n = length(beta)
   
   #calculate Y with generating from normal dist
-  Y = X %*% beta + rnorm(n,0,sigma)
+  Y = X %*% beta + rnorm(n, 0, sigma)
   
   # Return Y
   return(Y)
